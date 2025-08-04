@@ -1,0 +1,82 @@
+/* -------- RESET -------- */
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",Helvetica,Arial,sans-serif;background:#fff;color:#050505}
+
+/* -------- BIẾN -------- */
+:root{
+  --radius:8px;                       /* bo góc nhẹ như ảnh */
+  --clr-stroke:#ccd0d5;
+  --clr-primary:#1877f2;
+  --clr-primary-h:#156ae5;
+  --clr-primary-a:#0f5ed0;
+}
+
+/* -------- LAYOUT -------- */
+.wrapper{
+  max-width:640px;
+  margin:60px auto;
+  padding:0 24px;
+}
+.meta{font:600 13px/1 "Segoe UI",sans-serif;color:#65676b;margin-bottom:8px}
+h1{margin:0 0 14px;font-size:28px;font-weight:700}
+.desc{margin-bottom:28px;font-size:15px;line-height:1.5}
+.illustration{width:100%;display:block;margin-bottom:28px;object-fit:cover}
+
+/* ---- 6‑digit code input field ---- */
+.form-control {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 16px;
+  border: 1px solid var(--clr-stroke);
+  border-radius: 50px;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+.form-control:focus {
+  border-color: #1877f2;
+  box-shadow: 0 0 0 2px rgba(24,119,242,.2);
+}
+
+/* -------- BUTTONS -------- */
+.btn{
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background .15s, color .15s;
+  border: 1px solid transparent;
+}
+.btn-primary{background:var(--clr-primary);color:#fff;margin-top:14px}
+.btn-primary:hover{background:var(--clr-primary-h)}
+.btn-primary:active{background:var(--clr-primary-a)}
+
+.btn-secondary{
+  margin-top:12px;
+  background:#fff;
+  color:#050505;
+  border:1px solid var(--clr-stroke);
+}
+.btn-secondary:hover{background:#f0f2f5}
+
+/* -------- FEEDBACK -------- */
+.invalid-feedback{
+  margin-top:12px;
+  font-size:14px;
+  color:#d32f2f
+}
+
+/* -------- SPINNER -------- */
+.spinner-border{width:1rem;height:1rem;margin-right:8px}
+
+/* -------- RESPONSIVE (tuỳ chọn) -------- */
+@media(max-width:480px){
+  .wrapper{margin:32px auto;padding:0 16px}
+}
+/* … (toàn bộ phần css cũ của bạn) … */
+
+/* thêm: ẩn feedback mặc định & trạng thái disabled */
+.invalid-feedback    { display:none;margin-top:8px;color:#d32f2f;font-size:14px }
+.form-control.disabled{ background:#f0f2f5;pointer-events:none;opacity:.7 }
+.btn[disabled]        { opacity:.6;cursor:not-allowed }
